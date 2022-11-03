@@ -1,73 +1,39 @@
-import java.util.Scanner;
-public class Main {
-       
-    public static void main(String args[] )  
-    {  
-        int balance = 44345, withdraw, deposit;  
-        int pin = 2130;
-          
-          
-        Scanner sc = new Scanner(System.in);  
-       
-     
-          System.out.println("Welcome to DOrSU banking System");
-          System.out.print("Please enter your 4 digit pin:");
-         int gh = sc.nextInt();
-         while (pin != gh) {
-         System.out.println("");
-         System.out.println("Sorry there is no account link to this pin");
-         System.out.print("Please try again: ");
-         gh = sc.nextInt();
-           }
-         System.out.println("");
-         
-      while(true)  
-        {   System.out.println("Welcome acount 37282 ");
-            System.out.println("To start select from the following transaction");
-            System.out.println("1 View balance");  
-            System.out.println("2 Withdraw");  
-            System.out.println("3 Deposit");  
-            System.out.println("4 EXIT");  
-            System.out.print("Input:"); 
-              
-            int choice = sc.nextInt();  
-            System.out.println("");
-            switch(choice)  
-            {  
-        case 1:  
-        System.out.println("balance is :" + balance);
-        System.out.println("");
-        break;
-        
-        case 2:
-        System.out.println("Your current balance is " + balance);
-        System.out.println("Enter amount to be withdrawn: ");
-        withdraw = sc.nextInt();
-        if (balance >= withdraw){
-          balance = balance - withdraw;
-          System.out.println("Thank you!!");
-          System.out.println("");
-       
-        break;}
-        while (balance >= 100){
-        System.out.println("Your current balance is " + balance);
-          System.out.println("Atleast leave a minimum amount of 100, please try again");
-          int ab = sc.nextInt();
-          
-        }
-          
-        case 3:
-          System.out.print("Enter amount to be deposited:");
-          deposit = sc.nextInt();
-          balance = balance + deposit;
-          System.out.println("Your money has been successfully deposited");
-          System.out.println("");
-
-        break;
-        
-        case 4:
-        System.exit(0);  
-            }
-        }  
-    }  
-}  
+Set balance to desired ammount
+initiate int variable withdraw and deposit without no value
+set pin to desired pin number
+ print "please input pin number"
+if input == to 2130
+ print "Welcome account number 37282"
+else 
+ print "Sorry there's no account bound to this pin number, please try again"
+end if 
+initiate while (true)
+set choice to input 
+choice 1 view balance 
+       2 withdraw 
+       3 deposit 
+       4 exit 
+initiate swtich(choice) 
+ case 1 view balance 
+  print "balance is " + balance 
+   break 
+ case 2 withdraw 
+  print "enter amount to be withdrawn"
+ set withdraw to input 
+ if balance >= balance 
+  print thank you!!
+ end if
+ set balance = balance - withdraw 
+   break 
+initiate while balance >= 100 
+  print "leave atleast a minimum of 100, please try again" 
+set ab to input 
+ case 3
+  print "enter amount to be deposited"
+set deposit to input 
+  print "your money has been successfully deposited" 
+set balance = balance + deposit 
+   break 
+ case 4 
+   System exit 
+end code
