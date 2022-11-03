@@ -1,5 +1,3 @@
-package com;
-
 import java.util.Scanner;
 public class Main {
        
@@ -63,7 +61,8 @@ public class Main {
           deposit = sc.nextInt();
           balance = balance + deposit;
           System.out.println("Your money has been successfully deposited");
-          
+          System.out.println("");
+
         break;
         
         case 4:
